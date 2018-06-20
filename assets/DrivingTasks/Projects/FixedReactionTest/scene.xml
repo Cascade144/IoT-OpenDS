@@ -1,0 +1,2157 @@
+<!-- <?xml version="1.0" encoding="UTF-8" standalone="no"?> -->
+<scene xmlns="http://opends.eu/drivingtask/scene" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://opends.eu/drivingtask/scene ../../Schema/scene.xsd">
+
+	<sounds>
+		<sound id="good" key="Sounds/Effects/Beep.ogg">
+			<positional value="false"/>
+			<directional value="false"/>
+			<loop>false</loop>
+			<volume>0.5</volume>
+			<pitch>1.0</pitch>
+		</sound>
+		<sound id="fail" key="Sounds/Effects/Beep.ogg">
+			<positional value="false"/>
+			<directional value="false"/>
+			<loop>false</loop>
+			<volume>0.5</volume>
+			<pitch>1.0</pitch>
+		</sound>
+	</sounds>
+
+	<models>
+		<model id="grass" key="Scenes/land_plain_50x5/land_plain.j3o" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>meshShape</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="Ferrari" key="Models/Cars/drivingCars/CitroenC4/Car.j3o" ref="">
+			<mass>800</mass>
+			<visible>true</visible>
+			<collisionShape>meshShape</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24500.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="road_5lane" key="Models/road_segments/road_5lane/road_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>meshShape</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1000.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24930.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="Exp_BLC_150_StartPosition_Trigger" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24500.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Start_Trigger" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24400.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_End_Trigger" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20250.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_StartSignBridge" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24400.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_StartSignPanel" key="Models/sign_panels/Start/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24400.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_FinishSignBridge" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20250.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_FinishSignPanel" key="Models/sign_panels/Finish/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20250.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial0_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24200.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial0_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24250.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial0_ContainerElement0" key="Models/sign_panels/Brake/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-7.4</entry>
+					<entry>0.0</entry>
+					<entry>24200.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial1_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24000.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial1_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24050.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial1_ContainerElement4" key="Models/sign_panels/LaneChange/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>7.4</entry>
+					<entry>0.0</entry>
+					<entry>24000.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial2_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>23800.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial2_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>23850.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial2_ContainerElement4" key="Models/sign_panels/Brake/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>7.4</entry>
+					<entry>0.0</entry>
+					<entry>23800.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial3_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>23600.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial3_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>23650.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial3_ContainerElement0" key="Models/sign_panels/Brake/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-7.4</entry>
+					<entry>0.0</entry>
+					<entry>23600.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial4_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>23400.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial4_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>23450.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial4_ContainerElement1" key="Models/sign_panels/Brake/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-3.7</entry>
+					<entry>0.0</entry>
+					<entry>23400.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial5_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>23200.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial5_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>23250.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial5_ContainerElement1" key="Models/sign_panels/LaneChange/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-3.7</entry>
+					<entry>0.0</entry>
+					<entry>23200.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial6_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>23000.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial6_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>23050.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial6_ContainerElement3" key="Models/sign_panels/Brake/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>3.7</entry>
+					<entry>0.0</entry>
+					<entry>23000.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial7_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>22800.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial7_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>22850.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial7_ContainerElement0" key="Models/sign_panels/LaneChange/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-7.4</entry>
+					<entry>0.0</entry>
+					<entry>22800.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial8_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>22600.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial8_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>22650.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial8_ContainerElement3" key="Models/sign_panels/Brake/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>3.7</entry>
+					<entry>0.0</entry>
+					<entry>22600.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial9_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>22400.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial9_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>22450.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial9_ContainerElement4" key="Models/sign_panels/LaneChange/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>7.4</entry>
+					<entry>0.0</entry>
+					<entry>22400.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial10_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>22200.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial10_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>22250.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial10_ContainerElement3" key="Models/sign_panels/LaneChange/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>3.7</entry>
+					<entry>0.0</entry>
+					<entry>22200.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial11_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>22000.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial11_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>22050.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial11_ContainerElement0" key="Models/sign_panels/LaneChange/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-7.4</entry>
+					<entry>0.0</entry>
+					<entry>22000.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial12_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>21800.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial12_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>21850.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial12_ContainerElement3" key="Models/sign_panels/Brake/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>3.7</entry>
+					<entry>0.0</entry>
+					<entry>21800.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial13_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>21600.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial13_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>21650.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial13_ContainerElement0" key="Models/sign_panels/LaneChange/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-7.4</entry>
+					<entry>0.0</entry>
+					<entry>21600.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial14_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>21400.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial14_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>21450.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial14_ContainerElement1" key="Models/sign_panels/Brake/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-3.7</entry>
+					<entry>0.0</entry>
+					<entry>21400.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial15_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>21200.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial15_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>21250.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial15_ContainerElement3" key="Models/sign_panels/LaneChange/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>3.7</entry>
+					<entry>0.0</entry>
+					<entry>21200.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial16_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>21000.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial16_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>21050.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial16_ContainerElement1" key="Models/sign_panels/Brake/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-3.7</entry>
+					<entry>0.0</entry>
+					<entry>21000.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial17_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20800.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial17_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20850.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial17_ContainerElement1" key="Models/sign_panels/LaneChange/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-3.7</entry>
+					<entry>0.0</entry>
+					<entry>20800.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial18_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20600.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial18_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20650.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial18_ContainerElement4" key="Models/sign_panels/Brake/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>7.4</entry>
+					<entry>0.0</entry>
+					<entry>20600.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+		<model id="BLC_Test_Block0_Trial19_Container" key="Models/sign_bridges/bridge_5lane/bridge_5lane.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20400.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial19_Trigger0" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20450.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Block0_Trial19_ContainerElement4" key="Models/sign_panels/LaneChange/panel_sign.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>7.4</entry>
+					<entry>0.0</entry>
+					<entry>20400.0</entry>
+				</vector>
+			</translation>
+			<ambientLight>
+				<color>
+					<vector jtype="java_lang_Float" size="4">
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+						<entry>1.5</entry>
+					</vector>
+				</color>
+			</ambientLight>
+		</model>
+	</models>
+
+	<geometries>
+		<point id="idealPoint1">
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>24400.0</entry>
+				</vector>
+			</translation>
+		</point>
+		<point id="idealPoint2">
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20250.0</entry>
+				</vector>
+			</translation>
+		</point>
+	</geometries>
+
+	<resetPoints>
+		<resetPoint id="reset1">
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0</entry>
+					<entry>0</entry>
+					<entry>4995</entry>
+				</vector>
+			</translation>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0</entry>
+					<entry>0</entry>
+					<entry>0</entry>
+				</vector>
+			</rotation>
+		</resetPoint>
+	</resetPoints>
+
+	<gravity>9.81</gravity>
+
+	<lights>
+		<directionalLight>
+			<direction>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.5</entry>
+					<entry>-0.5</entry>
+					<entry>0.5</entry>
+				</vector>
+			</direction>
+			<color>
+				<vector jtype="java_lang_Float" size="4">
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+				</vector>
+			</color>
+		</directionalLight>
+		<directionalLight>
+			<direction>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-0.5</entry>
+					<entry>-0.5</entry>
+					<entry>0.5</entry>
+				</vector>
+			</direction>
+			<color>
+				<vector jtype="java_lang_Float" size="4">
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+				</vector>
+			</color>
+		</directionalLight>
+		<directionalLight>
+			<direction>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.5</entry>
+					<entry>-0.5</entry>
+					<entry>-0.5</entry>
+				</vector>
+			</direction>
+			<color>
+				<vector jtype="java_lang_Float" size="4">
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+				</vector>
+			</color>
+		</directionalLight>
+		<directionalLight>
+			<direction>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-0.5</entry>
+					<entry>-0.5</entry>
+					<entry>-0.5</entry>
+				</vector>
+			</direction>
+			<color>
+				<vector jtype="java_lang_Float" size="4">
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+					<entry>0.7</entry>
+				</vector>
+			</color>
+		</directionalLight>
+	</lights>
+	<skyTexture>Textures/Sky/Bright/hills.dds</skyTexture>
+</scene>
