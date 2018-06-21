@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <BorderPane layoutX="200.0" layoutY="89.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <ImageView fitHeight="300.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../assets/OpenDS.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </ImageView>
+         </center>
+         <bottom>
+            <FlowPane alignment="TOP_CENTER" hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="65.0" prefWidth="500.0" style="-fx-border-color: black; -fx-background-color: grey;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="105.0" text="Driver Name">
+                     <FlowPane.margin>
+                        <Insets top="20.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <TextField fx:id="driverNameEntry" alignment="BOTTOM_LEFT" promptText="ID or Name">
+                     <FlowPane.margin>
+                        <Insets top="20.0" />
+                     </FlowPane.margin>
+                  </TextField>
+                  <Button fx:id="startButton" mnemonicParsing="false" onAction="#launchOpenDS" text="Start">
+                     <FlowPane.margin>
+                        <Insets top="20.0" />
+                     </FlowPane.margin></Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </FlowPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

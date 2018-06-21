@@ -65,6 +65,7 @@ public class SettingsLoader
 		General_rightMirror_horizontalAngle("settings:general/settings:rightMirror/settings:horizontalAngle"),
 		General_rightMirror_verticalAngle("settings:general/settings:rightMirror/settings:verticalAngle"),
 		General_numberOfScreens("settings:general/settings:numberOfScreens"),
+		General_numberOfTrials("settings:general/settings:numberOfTrials"),
 		General_angleBetweenAdjacentCameras("settings:general/settings:angleBetweenAdjacentCameras"),
 		General_frustumNear("settings:general/settings:frustumNear"),
 		General_frustumFar("settings:general/settings:frustumFar"),

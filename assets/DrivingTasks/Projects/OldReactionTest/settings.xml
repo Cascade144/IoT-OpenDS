@@ -6,7 +6,8 @@
 	<general>
 		<driverName>default driver</driverName>
 		<showStats>false</showStats>
-		<!-- 
+		<numberOfTrials>3</numberOfTrials>
+		<!--
 		<numberOfScreens>3</numberOfScreens>
 		<angleBetweenAdjacentCameras>45</angleBetweenAdjacentCameras>
 		 -->

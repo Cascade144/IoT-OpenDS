@@ -29,8 +29,8 @@ import com.jme3.system.AppSettings;
 public class StartPropertiesReader
 {
 	private Properties properties = new Properties();
-	private boolean loadDefaults = false;
-	private boolean showSettingsScreen = true;
+	private boolean loadDefaults = true;
+	private boolean showSettingsScreen = false;
 	private String drivingTaskPath = "";
 	private String driverName = "";
 	
@@ -62,15 +62,15 @@ public class StartPropertiesReader
         {
         	settings.setUseJoysticks(getBooleanProperty("usejoysticks", true));
         	
-        	settings.setFullscreen(getBooleanProperty("fullscreen", false));
+        	settings.setFullscreen(getBooleanProperty("fullscreen", true));
         
-        	int width = getIntegerProperty("width", 2280);
-        	int height = getIntegerProperty("height", 720);
+        	int width = getIntegerProperty("width", 1920);
+        	int height = getIntegerProperty("height", 1080);
         	settings.setResolution(width, height);
 
 	        settings.setSamples(getIntegerProperty("antialias", 0));
 	        settings.setBitsPerPixel(getIntegerProperty("colordepth", 24));
-	        settings.setVSync(getBooleanProperty("vsync", false));
+	        settings.setVSync(getBooleanProperty("vsync", true));
 	        settings.setFrequency(getIntegerProperty("refreshrate", 60));
 	       
 	        showSettingsScreen = getBooleanProperty("showsettingsscreen", true);

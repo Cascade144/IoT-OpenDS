@@ -243,6 +243,17 @@ public class Simulator extends SimulationBasics
 	{
 		return outputFolder;
 	}
+
+	private static int numberOfTrials;
+	public static int getNumOfTrials()
+	{
+		return numberOfTrials;
+	}
+
+	private int currentTrial;
+	public int getCurrentTrial() {
+		return currentTrial;
+	}
 	
 	public static boolean oculusRiftAttached = false;/*
     private static OculusRift oculusRift;
@@ -265,10 +276,15 @@ public class Simulator extends SimulationBasics
     public void simpleInitApp()
     {
     	showStats(false);
-    	
-    	if(drivingTaskGiven)
-    		simpleInitDrivingTask(SimulationDefaults.drivingTaskFileName, SimulationDefaults.driverName);
-    	else
+
+        if(drivingTaskGiven) {
+            numberOfTrials = settingsLoader.getSetting(Setting.General_numberOfTrials, 1);
+            System.out.println("Driving task automatic");
+            for(currentTrial = 1; currentTrial <= numberOfTrials; currentTrial++) {
+                simpleInitDrivingTask(SimulationDefaults.drivingTaskFileName, SimulationDefaults.driverName);
+
+            }
+        } else
     		initDrivingTaskSelectionGUI();
     }
     
@@ -302,12 +318,21 @@ public class Simulator extends SimulationBasics
 
 
     public void simpleInitDrivingTask(String drivingTaskFileName, String driverName)
-    {		
-    	SimulationDefaults.drivingTaskFileName = drivingTaskFileName;
-    	
-    	Util.makeDirectory("analyzerData");
-    	outputFolder = "analyzerData"+File.separator+ Util.getDateTimeString();
-    	
+    {
+        int trialNumber = 1;
+        numberOfTrials =1;
+		SimulationDefaults.drivingTaskFileName = drivingTaskFileName;
+		//numberOfTrials = settingsLoader.getSetting(Setting.General_numberOfScreens, 1);
+
+		currentTrial = trialNumber;
+		String experimentFileName = "experiment"+Util.getDateTimeString();
+		if(numberOfTrials > 1) {
+			Util.makeDirectory("analyzerData/"+experimentFileName);
+			outputFolder = "analyzerData"+File.separator+experimentFileName+File.separator+"trial"+currentTrial;
+		} else {
+			Util.makeDirectory("analyzerData");
+			outputFolder = "analyzerData"+File.separator+Util.getDateTimeString();
+		}
     	initDrivingTaskLayers();
     	
     	// show stats if set in driving task
