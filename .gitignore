@@ -20,9 +20,6 @@ libjinput-linux64.so
 liblwjgl64.so
 libopenal64.so
 
-
-.idea/
-
 # Created by https://www.gitignore.io/api/intellij+iml
 
 ### Intellij+iml ###
