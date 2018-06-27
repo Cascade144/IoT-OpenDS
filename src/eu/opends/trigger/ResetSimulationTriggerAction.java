@@ -24,11 +24,11 @@ import eu.opends.main.Simulator;
  * 
  * @author Rafael Math
  */
-public class ShutDownSimulationTriggerAction extends TriggerAction 
+public class ResetSimulationTriggerAction extends TriggerAction
 {
 	private Simulator sim;
-	
-	public ShutDownSimulationTriggerAction(Simulator sim, float delay, int maxRepeat)
+
+	public ResetSimulationTriggerAction(Simulator sim, float delay, int maxRepeat)
 	{
 		super(delay, maxRepeat);
 		this.sim = sim;
@@ -39,7 +39,7 @@ public class ShutDownSimulationTriggerAction extends TriggerAction
 	{
 		if(!isExceeded())
 		{	
-			sim.destroy();
+			sim.reset();
 			updateCounter();
 		}
 	}

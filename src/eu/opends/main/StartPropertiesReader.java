@@ -24,6 +24,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import com.jme3.asset.AssetNotFoundException;
 import com.jme3.system.AppSettings;
 
 public class StartPropertiesReader
@@ -54,7 +55,7 @@ public class StartPropertiesReader
 		
     	AppSettings settings = new AppSettings(loadDefaults); //false --> remember previous values
         settings.setUseJoysticks(true);
-        settings.setSettingsDialogImage("OpenDS.png");
+        settings.setSettingsDialogImage("assets/Textures/Logo/OpenDS.png");
         settings.setTitle("OpenDS");
         
         // set splash screen parameters

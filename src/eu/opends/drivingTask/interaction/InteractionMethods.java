@@ -44,6 +44,7 @@ import eu.opends.trigger.ReportSpeedTriggerAction;
 import eu.opends.trigger.ReportTrafficLightTriggerAction;
 import eu.opends.trigger.RequestGreenTrafficLightAction;
 import eu.opends.trigger.ResetCarToResetPointAction;
+import eu.opends.trigger.ResetSimulationTriggerAction;
 import eu.opends.trigger.ResumeTriggerAction;
 import eu.opends.trigger.SendMessageTriggerAction;
 import eu.opends.trigger.SendNumberToParallelPortTriggerAction;
@@ -416,6 +417,20 @@ public class InteractionMethods
 	{
 		// create ShutDownSimulationTriggerAction
 		return new ShutDownSimulationTriggerAction((Simulator)sim, delay, repeat);
+	}
+
+	@Action(
+			name = "resetSimulation",
+			layer = Layer.INTERACTION,
+			description = "Reset simulation",
+			defaultDelay = 3,
+			defaultRepeat = 0,
+			param = {}
+	)
+	public  TriggerAction resetSimulation(SimulationBasics sim, float delay, int repeat, Properties parameterList)
+	{
+		// create ResetSimulationTriggerAction
+		return new ResetSimulationTriggerAction((Simulator)sim, delay, repeat);
 	}
 
 

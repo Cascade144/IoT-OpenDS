@@ -21,7 +21,7 @@
         		<engine profile="">
         			<engineOn>true</engineOn>
         			<minSpeed>20</minSpeed>
-					<maxSpeed>60</maxSpeed>
+					<maxSpeed>200</maxSpeed>
 					<acceleration>3.3</acceleration>
 					<minRPM>750</minRPM>
 					<maxRPM>7500</maxRPM>

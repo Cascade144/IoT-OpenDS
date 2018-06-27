@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="assets">
+    <output-path>$PROJECT_DIR$/bin/artifacts/IoT_OpenDS</output-path>
+    <root id="root">
+      <element id="directory" name="assets">
+        <element id="dir-copy" path="$PROJECT_DIR$/assets" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/startProperties.properties" />
+    </root>
+  </artifact>
+</component>

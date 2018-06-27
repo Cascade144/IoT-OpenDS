@@ -29,6 +29,8 @@ import java.nio.file.StandardCopyOption;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.jme3.renderer.Renderer;
+import eu.opends.jasperReport.ReactionLogger;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -244,8 +246,8 @@ public class Simulator extends SimulationBasics
 		return outputFolder;
 	}
 
-	private static int numberOfTrials;
-	public static int getNumOfTrials()
+	private int numberOfTrials;
+	public int getNumOfTrials()
 	{
 		return numberOfTrials;
 	}
@@ -253,6 +255,13 @@ public class Simulator extends SimulationBasics
 	private int currentTrial;
 	public int getCurrentTrial() {
 		return currentTrial;
+	}
+
+	private String experimentFileName;
+
+	private boolean simFinished = false;
+	public void setFinished(boolean T) {
+		simFinished = T;
 	}
 	
 	public static boolean oculusRiftAttached = false;/*
@@ -276,14 +285,10 @@ public class Simulator extends SimulationBasics
     public void simpleInitApp()
     {
     	showStats(false);
-
+		initDrivingTaskLayers();
         if(drivingTaskGiven) {
-            numberOfTrials = settingsLoader.getSetting(Setting.General_numberOfTrials, 1);
             System.out.println("Driving task automatic");
-            for(currentTrial = 1; currentTrial <= numberOfTrials; currentTrial++) {
-                simpleInitDrivingTask(SimulationDefaults.drivingTaskFileName, SimulationDefaults.driverName);
-
-            }
+            simpleInitDrivingTask(SimulationDefaults.drivingTaskFileName, SimulationDefaults.driverName);
         } else
     		initDrivingTaskSelectionGUI();
     }
@@ -320,12 +325,12 @@ public class Simulator extends SimulationBasics
     public void simpleInitDrivingTask(String drivingTaskFileName, String driverName)
     {
         int trialNumber = 1;
-        numberOfTrials =1;
+        numberOfTrials = 1;
 		SimulationDefaults.drivingTaskFileName = drivingTaskFileName;
-		//numberOfTrials = settingsLoader.getSetting(Setting.General_numberOfScreens, 1);
-
+		numberOfTrials = settingsLoader.getSetting(Setting.General_numberOfTrials, 1);
+		System.out.println("Number of Trials: "+numberOfTrials);
 		currentTrial = trialNumber;
-		String experimentFileName = "experiment"+Util.getDateTimeString();
+		experimentFileName = "experiment"+Util.getDateTimeString();
 		if(numberOfTrials > 1) {
 			Util.makeDirectory("analyzerData/"+experimentFileName);
 			outputFolder = "analyzerData"+File.separator+experimentFileName+File.separator+"trial"+currentTrial;
@@ -345,13 +350,12 @@ public class Simulator extends SimulationBasics
 			oculusRiftAttached = true;
 		else if(oculusAttachedString.equalsIgnoreCase("disabled"))
 			oculusRiftAttached = false;
-		
     	// sets up physics, camera, light, shadows and sky
     	super.simpleInitApp();
-		
     	// set gravity
     	gravityConstant = drivingTask.getSceneLoader().getGravity(SimulationDefaults.gravity);
-    	getPhysicsSpace().setGravity(new Vector3f(0, -gravityConstant, 0));	
+    	gravityConstant = drivingTask.getSceneLoader().getGravity(SimulationDefaults.gravity);
+    	getPhysicsSpace().setGravity(new Vector3f(0, -gravityConstant, 0));
     	getPhysicsSpace().setAccuracy(0.008f); //TODO comment to set accuracy to 0.0166666 ?
 
     	PanelCenter.init(this);
@@ -496,6 +500,8 @@ public class Simulator extends SimulationBasics
                 taskCogLoad = new CogMain(this);
                 
 		initializationFinished = true;
+		System.out.println("Finished initialization.");
+		System.out.println("Beginning test.");
     }
 
 	
@@ -657,7 +663,7 @@ public class Simulator extends SimulationBasics
 	public void destroy()
     {
 		logger.info("started destroy()");
-
+        System.out.println("Beginning destroy()");
 		if(initializationFinished)
 		{
 			if(lightningClient != null)
@@ -698,13 +704,59 @@ public class Simulator extends SimulationBasics
 		}
 
 		super.destroy();
+		System.out.println("Finished destroying application");
 		logger.info("finished destroy()");
 		
-                if(this.platformImplInitialized) {
-    		   PlatformImpl.exit();
-                   //System.exit(0);
-                 }
+		if(this.platformImplInitialized) {
+			PlatformImpl.exit();
+			System.exit(0);
+		}
     }
+
+    public void reset()
+    {
+        System.out.println("Beginning restart");
+        // Increase the current trial number.
+        currentTrial += 1;
+        if(currentTrial > 3) {
+            System.out.println();
+            super.destroy();
+        }
+        System.out.println("Now on trial: "+currentTrial);
+        // Reset the cars position back to the start position.
+        car.setPosition(scenarioLoader.getStartLocation());
+        // Change the output folder to a new trial folder
+        outputFolder = "analyzerData"+File.separator+experimentFileName+File.separator+"trial"+currentTrial;
+        drivingTaskLogger = new DrivingTaskLogger(outputFolder, SimulationDefaults.driverName, drivingTask.getFileName());
+        reactionCenter.close();
+        reactionCenter.start();
+        this.initDrivingTaskLayers();
+	    System.out.println("Finished restart");
+    }
+
+    /*
+    public void reset()
+    {
+        System.out.println("Beginning restart.");
+        car.setPosition(scenarioLoader.getStartLocation());
+        currentTrial = currentTrial++;
+        outputFolder = "analyzerData"+File.separator+experimentFileName+File.separator+"trial"+currentTrial;
+        drivingTaskLogger.quit();
+		drivingTaskLogger = new DrivingTaskLogger(outputFolder, SimulationDefaults.driverName, drivingTask.getFileName());
+        //load map model
+        System.out.println("Resetting map");
+        // init trigger center
+        System.out.println("Resetting trigger center");
+        triggerCenter.setup();
+        // init reaction center
+        System.out.println("Resetting reaction Center");
+        reactionCenter.close();
+        reactionCenter = new ReactionCenter(this);
+        String drivingTaskFileName = SimulationDefaults.drivingTaskFileName;
+        File drivingTaskFile = new File(drivingTaskFileName);
+        drivingTask = new DrivingTask(this, drivingTaskFile);
+        System.out.println("Finished resetting game.");
+    }*/
 	
 
     public static void main(String[] args) 
@@ -776,9 +828,13 @@ public class Simulator extends SimulationBasics
 			
 			if(!startPropertiesReader.getDriverName().isEmpty())
 				SimulationDefaults.driverName = startPropertiesReader.getDriverName();
-			
-			
-	    	if(args.length >= 1)
+
+			if(args.length == 1){
+			    int trialNum = Integer.parseInt(args[0]);
+			    trialNum = trialNum--;
+			    System.out.println("Number of trials left: "+trialNum);
+            }
+	    	/*if(args.length >= 1)
 	    	{
 	    		if(DrivingTask.isValidDrivingTask(new File(args[0])))
 	    		{
@@ -790,7 +846,7 @@ public class Simulator extends SimulationBasics
 	    	if(args.length >= 2)
 	    	{
 	    		SimulationDefaults.driverName = args[1];
-	    	}
+	    	}*/
 			
 	    	sim.setPauseOnLostFocus(false);
 	    	

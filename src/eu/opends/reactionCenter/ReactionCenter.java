@@ -188,6 +188,7 @@ public class ReactionCenter
 			((BrakeReactionTimer)reactionTimer).setup(reactionGroupID, startSpeed, targetSpeed, 
 					mustPressBrakePedal, taskCompletionAfterTime, taskCompletionAfterDistance,
 					allowLaneChange, holdSpeedFor, failSound, successSound, comment, driverStats);
+			System.out.println("Setup brake reaction timer");
 		}
 		else
 			System.err.println("Make sure ReactionCenter has been started");
