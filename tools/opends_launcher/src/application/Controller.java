@@ -74,11 +74,16 @@ public class Controller {
             System.out.println("Unable to write new driver name to properties file.");
         }
         try {
+            System.out.println("Launching openDS.");
             Runtime run = Runtime.getRuntime();
-            Process openDS = run.exec("java -jar OpenDS.jar");
+            Process openDS = run.exec("java -jar ./IoT-OpenDS.jar");
+            InputStream in = openDS.getInputStream();
+            InputStream err = openDS.getErrorStream();
         } catch(IOException i){
-            System.out.println("Unable to launch program");
+            System.out.println("Unable to launch program.");
         }
+        // Then retrieve output
+
         System.exit(0);
     }
 

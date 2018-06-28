@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="IoT-OpenDS:jar">
+  <artifact type="jar" build-on-make="true" name="opends_launcher:jar">
     <output-path>$PROJECT_DIR$/bin/artifacts/IoT_OpenDS</output-path>
-    <root id="archive" name="IoT-OpenDS.jar">
-      <element id="module-output" name="IoT-OpenDS" />
+    <root id="archive" name="opends_launcher.jar">
+      <element id="module-output" name="opends_launcher" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jovr-0.3.2.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/castor-1.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3-effects.jar" path-in-jar="/" />
@@ -219,35 +219,6 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasperreports/batik-parser.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasperreports/KAPcomConnector.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasperreports/mondrian-3.1.1.12687.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jogl-all.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/j-ogg-vorbisd.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-networking.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-lwjgl-natives.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-jbullet.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-plugins.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-core.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/stack-alloc.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/j-ogg-oggd.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-jogg.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-blender.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-terrain.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/gluegen-rt.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/nifty.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-lwjgl.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jinput.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/lwjgl.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jglfont-core.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/vecmath.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/xmlpull-xpp3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-effects.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/nifty-default-controls.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/joal.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-niftygui.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/nifty-style-black.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/eventbus.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-openal-soft-natives-android.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jME3-desktop.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jME3/jbullet.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
