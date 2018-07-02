@@ -24,7 +24,7 @@
 	<screen id="start"
 		controller="eu.opends.niftyGui.InstructionScreenGUIController">
 
-		<layer id="dataEntryScreen_1" childLayout="center" backgroundColor="#0008" visible="true">
+		<layer id="dataEntryScreen_1" childLayout="center" backgroundColor="#0008" visible="false">
 			<panel id="options_panel" childLayout="vertical" width="688px" style="nifty-panel" height="626px">
 				<!-- PANEL 1 -->
 				<panel id="driver_data_panel" childLayout="vertical" backgroundColor="#333333ff" width="200px" style="nifty-panel" height="300px">
@@ -135,13 +135,6 @@
 			<panel childLayout="vertical" align="center" width="100%" height="10%">
 				<panel childLayout="vertical" align="center" width="100%" height="50%" />
 				<panel childLayout="horizontal" align="center" width="100%" height="50%">
-					<control id="zurueck" name="button" label="previous" height="100%" width="20%">
-						<effect>
-							<onClick name="focus" targetElement="#parent#parent#parent" />
-							<onClick name="show" targetElement="dataEntryScreen_1" />
-							<onClick name="hide" targetElement="instructionScreen_1" />
-						</effect>
-					</control>
 					<panel childLayout="center" align="center" width="20%" height="100%" />
 					<panel childLayout="center" align="center" width="20%" height="100%" />
 					<panel childLayout="center" align="center" width="20%" height="100%" />

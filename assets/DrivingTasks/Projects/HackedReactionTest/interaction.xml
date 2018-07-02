@@ -3,7 +3,7 @@
 	<activities>
 		<activity id="StartPosition_openInstructionsScreen" ref="">
 			<action delay="0.0" id="openInstructionsScreen" repeat="1">
-				<parameter name="instructionID" value="dataEntryScreen_1"/>
+				<parameter name="instructionID" value="instructionScreen_1"/>
 			</action>
 		</activity>
 		<activity id="Start_startRM" ref="">
@@ -19,7 +19,7 @@
 		</activity>
 		<activity id="End_pauseSimulation" ref="">
 			<action delay="0.0" id="pauseSimulation" repeat="4">
-				<parameter name="duration" value="0"/>
+				<parameter name="duration" value="15"/>
 			</action>
 		</activity>
 		<activity id="End_resetSimulation">

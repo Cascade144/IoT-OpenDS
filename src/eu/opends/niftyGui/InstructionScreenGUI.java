@@ -130,7 +130,10 @@ public class InstructionScreenGUI
 	 * 			ID of layer to initialize
 	 */
 	private void initInstructionScreenGUI(String layerID)
-	{		
+	{
+		if(sim.getCurrentTrial() > 1){
+			return;
+		}
 		NiftyJmeDisplay niftyDisplay = new NiftyJmeDisplay(assetManager, inputManager, audioRenderer, guiViewPort);
     	
     	// Create a new NiftyGUI object
@@ -139,6 +142,12 @@ public class InstructionScreenGUI
         // Get layerID from interaction.xml file of coresponding DrivingTask
         // Read XML and initialize custom ScreenController
         switch (layerID){
+
+			case "instructionScreen_1": {
+				xmlPath = "Interface/InstructionScreenGUI.xml";
+				nifty.fromXml(xmlPath, "start", new InstructionScreenGUIController(sim, this));
+			}
+
             case "dataEntryScreen_1": {
                 xmlPath = "Interface/InstructionScreenGUI.xml";
                 nifty.fromXml(xmlPath, "start", new InstructionScreenGUIController(sim, this));

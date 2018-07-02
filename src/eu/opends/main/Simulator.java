@@ -718,8 +718,11 @@ public class Simulator extends SimulationBasics
         System.out.println("Beginning restart");
         // Increase the current trial number.
         currentTrial += 1;
-        if(currentTrial > 3) {
-            System.out.println();
+        if (currentTrial == 3) {
+        	System.out.println("Beginning hacking portion...");
+		}
+        if(currentTrial > numberOfTrials) {
+            System.out.println("Trials finished");
             super.destroy();
         }
         System.out.println("Now on trial: "+currentTrial);
@@ -730,6 +733,7 @@ public class Simulator extends SimulationBasics
         drivingTaskLogger = new DrivingTaskLogger(outputFolder, SimulationDefaults.driverName, drivingTask.getFileName());
         reactionCenter.close();
         reactionCenter.start();
+
         this.initDrivingTaskLayers();
 	    System.out.println("Finished restart");
     }

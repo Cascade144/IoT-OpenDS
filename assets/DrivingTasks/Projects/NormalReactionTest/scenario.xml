@@ -22,7 +22,7 @@
         			<engineOn>true</engineOn>
         			<minSpeed>20</minSpeed>
 					<maxSpeed>200</maxSpeed>
-					<acceleration>3.3</acceleration>
+					<acceleration>4.0</acceleration>
 					<minRPM>750</minRPM>
 					<maxRPM>7500</maxRPM>
 					<soundIntensity>0.25</soundIntensity>
