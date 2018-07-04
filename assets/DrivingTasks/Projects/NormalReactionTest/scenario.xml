@@ -13,6 +13,7 @@
         	<car id="" profile="" ref="Ferrari">
         		<resetPoints>
         			<resetPoint ref="reset1"/>
+                    <resetPoint ref="reset2"/>
         		</resetPoints>
         		<tires profile="">
         			<type>winter</type>

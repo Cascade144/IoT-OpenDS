@@ -196,7 +196,7 @@ public class InstructionScreenGUI
 	 */
 	private void closeInstructionScreenGUI() 
 	{
-	nifty.exit();
+		nifty.exit();
         inputManager.setCursorVisible(false);
         flyCam.setEnabled(true);
 	}

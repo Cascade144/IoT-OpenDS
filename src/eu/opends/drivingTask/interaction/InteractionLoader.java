@@ -67,6 +67,15 @@ public class InteractionLoader
 			evaluateTriggers();
 	}
 
+	public void reset(){
+		this.activityMap = new HashMap<String,List<ActionDescription>>();
+		this.triggerList = new ArrayList<TriggerDescription>();
+		readActivities();
+		readTriggers();
+		if(sim instanceof Simulator)
+			evaluateTriggers();
+	}
+
 
 	public void readActivities()
 	{

@@ -27,6 +27,30 @@
 				<parameter name="duration" value="0"/>
 			</action>
 		</activity>
+		<activity id="Mid_disableSteeringRight">
+			<action delay="0.0" id="changeKeyBind" repeat="1">
+				<parameter name="mappingName" value="SteeringWheelRight"/>
+				<parameter name="actionType" value="disable"/>
+			</action>
+		</activity>
+		<activity id="Mid_disableSteeringLeft">
+			<action delay="0.0" id="changeKeyBind" repeat="1">
+				<parameter name="mappingName" value="SteeringWheelLeft"/>
+				<parameter name="actionType" value="disable"/>
+			</action>
+		</activity>
+		<activity id="Mid_disableBrake">
+			<action delay="0.0" id="changeKeyBind" repeat="1">
+				<parameter name="mappingName" value="Brake"/>
+				<parameter name="actionType" value="disable"/>
+			</action>
+		</activity>
+		<activity id="Mid_disableAccel">
+			<action delay="0.0" id="changeKeyBind" repeat="1">
+				<parameter name="mappingName" value="Accelerator"/>
+				<parameter name="actionType" value="disable"/>
+			</action>
+		</activity>
 		<activity id="BLC_Test_Block0_Trial0_Trigger0_makeVisible_BLC_Test_Block0_Trial0_ContainerElement0" ref="">
 			<action delay="0.1" id="manipulateObject" repeat="4">
 				<parameter name="visible" value="true"/>
@@ -40,7 +64,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial0_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -67,7 +91,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial1_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="4"/>
 				<parameter name="startLane" value="2"/>
@@ -94,7 +118,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial2_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -121,7 +145,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial3_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -148,7 +172,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial4_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -175,7 +199,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial5_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="1"/>
 				<parameter name="startLane" value="2"/>
@@ -202,7 +226,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial6_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -229,7 +253,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial7_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="0"/>
 				<parameter name="startLane" value="2"/>
@@ -256,7 +280,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial8_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -283,7 +307,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial9_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="4"/>
 				<parameter name="startLane" value="2"/>
@@ -310,7 +334,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial10_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="3"/>
 				<parameter name="startLane" value="2"/>
@@ -337,7 +361,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial11_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="0"/>
 				<parameter name="startLane" value="2"/>
@@ -364,7 +388,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial12_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -391,7 +415,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial13_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="0"/>
 				<parameter name="startLane" value="2"/>
@@ -418,7 +442,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial14_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -445,7 +469,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial15_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="3"/>
 				<parameter name="startLane" value="2"/>
@@ -472,7 +496,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial16_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -499,7 +523,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial17_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="1"/>
 				<parameter name="startLane" value="2"/>
@@ -526,7 +550,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial18_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -553,7 +577,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial19_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="1">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="4"/>
 				<parameter name="startLane" value="2"/>
@@ -614,6 +638,7 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial0_Trigger0_makeVisible_BLC_Test_Block0_Trial0_ContainerElement0"/>
 				<activity ref="BLC_Test_Block0_Trial0_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_disableBrake"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial0_Trigger0</condition>
 		</trigger>
@@ -621,6 +646,7 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial1_Trigger0_makeVisible_BLC_Test_Block0_Trial1_ContainerElement4"/>
 				<activity ref="BLC_Test_Block0_Trial1_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_disableAccel"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial1_Trigger0</condition>
 		</trigger>

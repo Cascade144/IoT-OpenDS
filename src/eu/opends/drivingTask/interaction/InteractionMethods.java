@@ -29,6 +29,7 @@ import eu.opends.hmi.LocalDangerWarningPresentationModel;
 import eu.opends.hmi.PresentationModel;
 import eu.opends.hmi.RoadWorksInformationPresentationModel;
 import eu.opends.main.Simulator;
+import eu.opends.trigger.KeyBindTriggerAction;
 import eu.opends.trigger.GetTimeUntilBrakeAction;
 import eu.opends.trigger.GetTimeUntilSpeedChangeAction;
 import eu.opends.trigger.ManipulateObjectTriggerAction;
@@ -427,10 +428,44 @@ public class InteractionMethods
 			defaultRepeat = 0,
 			param = {}
 	)
-	public  TriggerAction resetSimulation(SimulationBasics sim, float delay, int repeat, Properties parameterList)
+	public TriggerAction resetSimulation(SimulationBasics sim, float delay, int repeat, Properties parameterList)
 	{
 		// create ResetSimulationTriggerAction
 		return new ResetSimulationTriggerAction((Simulator)sim, delay, repeat);
+	}
+
+	@Action(
+			name = "changeKeyBind",
+			layer = Layer.INTERACTION,
+			description = "Change keybinding",
+			defaultDelay = 3,
+			defaultRepeat = 0,
+			param = {@Parameter(name="mappingName", type="String", defaultValue = "Accelerator",
+								description = "What mapping to change"),
+					 @Parameter(name="actionType", type = "String", defaultValue = "remove",
+					 			description = "Remove or add keybind")
+					}
+		)
+	public TriggerAction changeKeyBind(SimulationBasics sim, float delay, int repeat, Properties parameterList)
+	{
+		String parameter = "";
+		try {
+			// Get mappingName parameter
+			parameter = "mappingName";
+			String mappingName = parameterList.getProperty(parameter);
+			if (mappingName == null)
+				throw new Exception();
+			// Get actionType parameter
+			parameter = "actionType";
+			String actionType = parameterList.getProperty(parameter);
+			if (actionType == null)
+				throw new Exception();
+			// create KeyBindTriggerAction
+			return new KeyBindTriggerAction((Simulator)sim, delay, repeat, mappingName, actionType);
+		} catch (Exception e) {
+			reportError("changeKeyBind", parameter);
+			return null;
+		}
 	}
 
 

@@ -726,42 +726,16 @@ public class Simulator extends SimulationBasics
             super.destroy();
         }
         System.out.println("Now on trial: "+currentTrial);
+
         // Reset the cars position back to the start position.
         car.setPosition(scenarioLoader.getStartLocation());
         // Change the output folder to a new trial folder
         outputFolder = "analyzerData"+File.separator+experimentFileName+File.separator+"trial"+currentTrial;
         drivingTaskLogger = new DrivingTaskLogger(outputFolder, SimulationDefaults.driverName, drivingTask.getFileName());
-        reactionCenter.close();
-        reactionCenter.start();
 
-        this.initDrivingTaskLayers();
-	    System.out.println("Finished restart");
+        System.out.println("Finished restart");
     }
 
-    /*
-    public void reset()
-    {
-        System.out.println("Beginning restart.");
-        car.setPosition(scenarioLoader.getStartLocation());
-        currentTrial = currentTrial++;
-        outputFolder = "analyzerData"+File.separator+experimentFileName+File.separator+"trial"+currentTrial;
-        drivingTaskLogger.quit();
-		drivingTaskLogger = new DrivingTaskLogger(outputFolder, SimulationDefaults.driverName, drivingTask.getFileName());
-        //load map model
-        System.out.println("Resetting map");
-        // init trigger center
-        System.out.println("Resetting trigger center");
-        triggerCenter.setup();
-        // init reaction center
-        System.out.println("Resetting reaction Center");
-        reactionCenter.close();
-        reactionCenter = new ReactionCenter(this);
-        String drivingTaskFileName = SimulationDefaults.drivingTaskFileName;
-        File drivingTaskFile = new File(drivingTaskFileName);
-        drivingTask = new DrivingTask(this, drivingTaskFile);
-        System.out.println("Finished resetting game.");
-    }*/
-	
 
     public static void main(String[] args) 
     {    

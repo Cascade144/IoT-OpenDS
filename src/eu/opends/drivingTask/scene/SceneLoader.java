@@ -92,6 +92,17 @@ public class SceneLoader
 		getResetPoints();
 		createMapObjects();
 	}
+
+	public void reset(){
+		geometryMap = new HashMap<String, Spatial>();
+		pointMap = new HashMap<String, Vector3f>();
+		resetPositionMap = new HashMap<String, ResetPosition>();
+		mapObjectsList = new ArrayList<MapObject>();
+		getGeometries(new String[]{"box", "sphere",  "cylinder", "terrain"});
+		getPoints();
+		getResetPoints();
+		createMapObjects();
+	}
 	
 	
 	public Map<String,AudioNode> getAudioNodes()

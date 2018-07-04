@@ -330,6 +330,7 @@ public class TriggerCenter
 	 */
 	public static void performTriggerAction(String triggerID) 
 	{
+		//System.out.println("Performing trigger on ID: "+triggerID);
 		if(!triggerReportList.contains(triggerID))
 		{
 			System.err.println("Trigger hit: " + triggerID);
@@ -386,7 +387,7 @@ public class TriggerCenter
 	 */
 	public static void removeTriggerReport(String objectID)
 	{
-		if(!triggerReportList.remove(objectID))
+		if (!triggerReportList.remove(objectID))
 			System.err.println("Could not remove '" + objectID + "' from trigger report list!");
 	}
 

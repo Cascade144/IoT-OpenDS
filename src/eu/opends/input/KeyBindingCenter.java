@@ -181,9 +181,10 @@ public class KeyBindingCenter
     	inputManager.addMapping("Accelerator", new JoyAxisTrigger(acceleratorControllerID, acceleratorAxis, invertAcceleratorAxis));
     	inputManager.addMapping("Brake", new JoyAxisTrigger(brakeControllerID, brakeAxis, invertBrakeAxis));
     	inputManager.addMapping("Clutch", new JoyAxisTrigger(clutchControllerID, clutchAxis, invertClutchAxis));
-    	
+
         inputManager.addListener(simulatorAnalogListener, "SteeringWheelLeft", "SteeringWheelRight", 
         		"CombinedPedalsAccelerator", "CombinedPedalsBrake", "Accelerator", "Brake", "Clutch");
+
 
         if(dumpJoystickList)
         	dumpJoysticks();

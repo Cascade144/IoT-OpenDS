@@ -2079,6 +2079,22 @@
 				</vector>
 			</rotation>
 		</resetPoint>
+		<resetPoint id="reset2">
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0</entry>
+					<entry>0</entry>
+					<entry>20250.0</entry>
+				</vector>
+			</translation>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0</entry>
+					<entry>0</entry>
+					<entry>0</entry>
+				</vector>
+			</rotation>
+		</resetPoint>
 	</resetPoints>
 
 	<gravity>9.81</gravity>

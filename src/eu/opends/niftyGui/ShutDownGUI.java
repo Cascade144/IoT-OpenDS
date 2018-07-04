@@ -60,7 +60,7 @@ public class ShutDownGUI
 	public void toggleDialog() 
 	{
 		if (shutDownDialogHidden)
-			showDialog();
+ 			showDialog();
 		else 
 			hideDialog();
 	}
