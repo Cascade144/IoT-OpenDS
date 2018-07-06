@@ -19,7 +19,7 @@
 		</activity>
 		<activity id="End_pauseSimulation" ref="">
 			<action delay="0.0" id="pauseSimulation" repeat="4">
-				<parameter name="duration" value="15"/>
+				<parameter name="duration" value="5"/>
 			</action>
 		</activity>
 		<activity id="End_resetSimulation">
@@ -49,6 +49,30 @@
 			<action delay="0.0" id="changeKeyBind" repeat="1">
 				<parameter name="mappingName" value="Accelerator"/>
 				<parameter name="actionType" value="disable"/>
+			</action>
+		</activity>
+		<activity id="Mid_enableSteeringRight">
+			<action delay="0.0" id="changeKeyBind" repeat="1">
+				<parameter name="mappingName" value="SteeringWheelRight"/>
+				<parameter name="actionType" value="enable"/>
+			</action>
+		</activity>
+		<activity id="Mid_enableSteeringLeft">
+			<action delay="0.0" id="changeKeyBind" repeat="1">
+				<parameter name="mappingName" value="SteeringWheelLeft"/>
+				<parameter name="actionType" value="enable"/>
+			</action>
+		</activity>
+		<activity id="Mid_enableBrake">
+			<action delay="0.0" id="changeKeyBind" repeat="1">
+				<parameter name="mappingName" value="Brake"/>
+				<parameter name="actionType" value="enable"/>
+			</action>
+		</activity>
+		<activity id="Mid_enableAccel">
+			<action delay="0.0" id="changeKeyBind" repeat="1">
+				<parameter name="mappingName" value="Accelerator"/>
+				<parameter name="actionType" value="enable"/>
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial0_Trigger0_makeVisible_BLC_Test_Block0_Trial0_ContainerElement0" ref="">
@@ -634,6 +658,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_End_Trigger</condition>
 		</trigger>
+		<!-- gantry 1 -->
 		<trigger id="BLC_Test_Block0_Trial0_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial0_Trigger0_makeVisible_BLC_Test_Block0_Trial0_ContainerElement0"/>
@@ -642,21 +667,26 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial0_Trigger0</condition>
 		</trigger>
+		<!-- gantry 2 -->
 		<trigger id="BLC_Test_Block0_Trial1_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial1_Trigger0_makeVisible_BLC_Test_Block0_Trial1_ContainerElement4"/>
 				<activity ref="BLC_Test_Block0_Trial1_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_enableBrake"/>
 				<activity ref="Mid_disableAccel"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial1_Trigger0</condition>
 		</trigger>
+		<!-- gantry 3 -->
 		<trigger id="BLC_Test_Block0_Trial2_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial2_Trigger0_makeVisible_BLC_Test_Block0_Trial2_ContainerElement4"/>
 				<activity ref="BLC_Test_Block0_Trial2_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_enableAccel"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial2_Trigger0</condition>
 		</trigger>
+		<!-- gantry 4 -->
 		<trigger id="BLC_Test_Block0_Trial3_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial3_Trigger0_makeVisible_BLC_Test_Block0_Trial3_ContainerElement0"/>
@@ -664,6 +694,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial3_Trigger0</condition>
 		</trigger>
+		<!-- gantry 5 -->
 		<trigger id="BLC_Test_Block0_Trial4_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial4_Trigger0_makeVisible_BLC_Test_Block0_Trial4_ContainerElement1"/>
@@ -671,6 +702,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial4_Trigger0</condition>
 		</trigger>
+		<!-- gantry 6 -->
 		<trigger id="BLC_Test_Block0_Trial5_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial5_Trigger0_makeVisible_BLC_Test_Block0_Trial5_ContainerElement1"/>
@@ -678,6 +710,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial5_Trigger0</condition>
 		</trigger>
+		<!-- gantry 7 -->
 		<trigger id="BLC_Test_Block0_Trial6_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial6_Trigger0_makeVisible_BLC_Test_Block0_Trial6_ContainerElement3"/>
@@ -685,6 +718,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial6_Trigger0</condition>
 		</trigger>
+		<!-- gantry 8 -->
 		<trigger id="BLC_Test_Block0_Trial7_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial7_Trigger0_makeVisible_BLC_Test_Block0_Trial7_ContainerElement0"/>
@@ -692,6 +726,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial7_Trigger0</condition>
 		</trigger>
+		<!-- gantry 9 -->
 		<trigger id="BLC_Test_Block0_Trial8_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial8_Trigger0_makeVisible_BLC_Test_Block0_Trial8_ContainerElement3"/>
@@ -699,6 +734,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial8_Trigger0</condition>
 		</trigger>
+		<!-- gantry 10 -->
 		<trigger id="BLC_Test_Block0_Trial9_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial9_Trigger0_makeVisible_BLC_Test_Block0_Trial9_ContainerElement4"/>
@@ -706,6 +742,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial9_Trigger0</condition>
 		</trigger>
+		<!-- gantry 11 -->
 		<trigger id="BLC_Test_Block0_Trial10_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial10_Trigger0_makeVisible_BLC_Test_Block0_Trial10_ContainerElement3"/>
@@ -713,6 +750,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial10_Trigger0</condition>
 		</trigger>
+		<!-- gantry 12 -->
 		<trigger id="BLC_Test_Block0_Trial11_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial11_Trigger0_makeVisible_BLC_Test_Block0_Trial11_ContainerElement0"/>
@@ -720,6 +758,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial11_Trigger0</condition>
 		</trigger>
+		<!-- gantry 13 -->
 		<trigger id="BLC_Test_Block0_Trial12_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial12_Trigger0_makeVisible_BLC_Test_Block0_Trial12_ContainerElement3"/>
@@ -727,6 +766,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial12_Trigger0</condition>
 		</trigger>
+		<!-- gantry 14 -->
 		<trigger id="BLC_Test_Block0_Trial13_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial13_Trigger0_makeVisible_BLC_Test_Block0_Trial13_ContainerElement0"/>
@@ -734,6 +774,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial13_Trigger0</condition>
 		</trigger>
+		<!-- gantry 15 -->
 		<trigger id="BLC_Test_Block0_Trial14_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial14_Trigger0_makeVisible_BLC_Test_Block0_Trial14_ContainerElement1"/>
@@ -741,6 +782,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial14_Trigger0</condition>
 		</trigger>
+		<!-- gantry 16 -->
 		<trigger id="BLC_Test_Block0_Trial15_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial15_Trigger0_makeVisible_BLC_Test_Block0_Trial15_ContainerElement3"/>
@@ -748,6 +790,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial15_Trigger0</condition>
 		</trigger>
+		<!-- gantry 17 -->
 		<trigger id="BLC_Test_Block0_Trial16_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial16_Trigger0_makeVisible_BLC_Test_Block0_Trial16_ContainerElement1"/>
@@ -755,6 +798,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial16_Trigger0</condition>
 		</trigger>
+		<!-- gantry 18 -->
 		<trigger id="BLC_Test_Block0_Trial17_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial17_Trigger0_makeVisible_BLC_Test_Block0_Trial17_ContainerElement1"/>
@@ -762,6 +806,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial17_Trigger0</condition>
 		</trigger>
+		<!-- gantry 19 -->
 		<trigger id="BLC_Test_Block0_Trial18_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial18_Trigger0_makeVisible_BLC_Test_Block0_Trial18_ContainerElement4"/>
@@ -769,6 +814,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial18_Trigger0</condition>
 		</trigger>
+		<!-- gantry 20 -->
 		<trigger id="BLC_Test_Block0_Trial19_Trigger0" priority="1">
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial19_Trigger0_makeVisible_BLC_Test_Block0_Trial19_ContainerElement4"/>

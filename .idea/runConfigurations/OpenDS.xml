@@ -3,7 +3,7 @@
     <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="MAIN_CLASS_NAME" value="eu.opends.main.Simulator" />
-    <module name="IoT-OpenDS" />
+    <module name="OpenDS" />
     <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     <method />
   </configuration>
