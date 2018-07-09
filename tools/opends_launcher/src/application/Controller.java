@@ -1,18 +1,12 @@
 package application;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import org.eclipse.jdt.internal.compiler.flow.FinallyFlowContext;
 
-import javax.imageio.IIOException;
-import java.net.URL;
 import java.io.*;
-import java.util.ResourceBundle;
-import java.util.*;
+
 
 public class Controller {
 

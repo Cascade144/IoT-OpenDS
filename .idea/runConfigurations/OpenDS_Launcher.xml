@@ -2,7 +2,7 @@
   <configuration default="false" name="OpenDS-Launcher" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="application.Main" />
     <module name="opends_launcher" />
-    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/tools/opends_launcher" />
     <method />
   </configuration>
 </component>
