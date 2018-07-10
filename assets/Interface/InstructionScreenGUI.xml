@@ -74,57 +74,57 @@
 
 			<panel childLayout="vertical" align="center" width="100%">
 
-				<panel childLayout="center" align="center" width="100%" height="60px" />
+               	<panel childLayout="center" align="center" width="100%" height="60px" />
 
 				<panel childLayout="center" align="center" width="100%" height="30px">
-					<control name="label" text="Welcome to this driving simulator experiment." color="#ffffffff"
+        	   		<control name="label" text="Welcome to this driving simulator experiment." color="#ffffffff"
 						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
 					</control>
-				</panel>
+        		</panel>
 
 				<panel childLayout="center" align="center" width="100%" height="30px" />
 
-				<panel childLayout="center" align="center" width="100%" height="30px">
-					<control name="label" text="Please put on  headphones for the entire duration of the experiment." color="#ffffffff"
+        		<panel childLayout="center" align="center" width="100%" height="30px">
+           			<control name="label" text="Please put on  headphones for the entire duration of the experiment." color="#ffffffff"
 						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
 					</control>
-				</panel>
+        		</panel>
 
 				<panel childLayout="center" align="center" width="100%" height="30px" />
 
-				<panel childLayout="center" align="center" width="100%" height="30px">
+         	    <panel childLayout="center" align="center" width="100%" height="30px">
 					<control name="label" text="In the following simulation you will be driving on a 5-lane road." color="#ffffffff"
 						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
 					</control>
-				</panel>
+        		</panel>
 
-				<panel childLayout="center" align="center" width="100%" height="30px">
+          	    <panel childLayout="center" align="center" width="100%" height="30px">
 					<control name="label" text="Your task will be to drive in the center lane at full speed (60 km/h)" color="#ffffffff"
 						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
 					</control>
-				</panel>
+       			</panel>
 
-				<panel childLayout="center" align="center" width="100%" height="30px">
+       	        <panel childLayout="center" align="center" width="100%" height="30px">
 					<control name="label" text="and to stay in lane as good as possible." color="#ffffffff"
 						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
 					</control>
-				</panel>
+       			</panel>
 
 				<panel childLayout="center" align="center" width="100%" height="30px" />
 
-				<panel childLayout="center" align="center" width="100%" height="30px">
+        	    <panel childLayout="center" align="center" width="100%" height="30px">
 					<control name="label" text="Note: the car's speed is fixed between 20 km/h and 60 km/h." color="#ffffffff"
 						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
-					</control>
-				</panel>
+		            </control>
+       			</panel>
 
 				<panel childLayout="center" align="center" width="100%" height="30px" />
 
-				<panel childLayout="center" align="center" width="100%" height="30px">
+       	        <panel childLayout="center" align="center" width="100%" height="30px">
 					<control name="label" text="You will pass different sign gantries." color="#ffffffff"
 						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
 					</control>
-				</panel>
+       			</panel>
 
 				<panel childLayout="center" align="center" width="100%" height="30px" />
 
@@ -138,15 +138,17 @@
 					<panel childLayout="center" align="center" width="20%" height="100%" />
 					<panel childLayout="center" align="center" width="20%" height="100%" />
 					<panel childLayout="center" align="center" width="20%" height="100%" />
-					<control id="vor" name="button" label="next" height="100%" width="20%">
-						<effect>
-							<onClick name="focus" targetElement="#parent#parent#parent" />
-							<onClick name="show" targetElement="instructionScreen_1_2" />
-							<onClick name="hide" targetElement="instructionScreen_1" />
-						</effect>
-					</control>
-				</panel>
+					<panel childLayout="center" align="center" width="20%" height="100%" />
+						<control id="vor" name="button" label="next" height="100%" width="20%">
+							<effect>
+								<onClick name="focus" targetElement="#parent#parent#parent" />
+								<onClick name="show" targetElement="instructionScreen_1_2" />
+								<onClick name="hide" targetElement="instructionScreen_1" />
+							</effect>
+						</control>
+	        	</panel>
 			</panel>
+
 
 		</layer>
 

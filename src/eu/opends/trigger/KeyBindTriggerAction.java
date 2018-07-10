@@ -43,7 +43,7 @@ public class KeyBindTriggerAction extends TriggerAction
     {
         if(!isExceeded())
         {
-            if(sim.getCurrentTrial() == 1)
+            if(sim.getCurrentTrial() == 3)
             {
                 int steeringControllerID;
                 int steeringAxis;
@@ -90,12 +90,14 @@ public class KeyBindTriggerAction extends TriggerAction
                             steeringAxis = settingsLoader.getSetting(Setting.Joystick_steeringAxis, 1);
                             invertSteeringAxis = settingsLoader.getSetting(Setting.Joystick_invertSteeringAxis, false);
                             inputManager.deleteTrigger(mappingName, new JoyAxisTrigger(steeringControllerID, steeringAxis, invertSteeringAxis));
+                            System.out.println("Deleted steering right keybinding.");
                             break;
                         case "SteeringWheelLeft":
                             steeringControllerID = settingsLoader.getSetting(Setting.Joystick_steeringControllerID, 0);
                             steeringAxis = settingsLoader.getSetting(Setting.Joystick_steeringAxis, 1);
                             invertSteeringAxis = settingsLoader.getSetting(Setting.Joystick_invertSteeringAxis, false);
                             inputManager.deleteTrigger(mappingName, new JoyAxisTrigger(steeringControllerID, steeringAxis, !invertSteeringAxis));
+                            System.out.println("Deleted steering left keybinding.");
                             break;
                         case "Brake":
                             int brakeControllerID = settingsLoader.getSetting(Setting.Joystick_brakeControllerID, 0);
@@ -109,6 +111,7 @@ public class KeyBindTriggerAction extends TriggerAction
                             int acceleratorAxis = settingsLoader.getSetting(Setting.Joystick_acceleratorAxis, 6);
                             boolean invertAcceleratorAxis = settingsLoader.getSetting(Setting.Joystick_invertAcceleratorAxis, true);
                             inputManager.deleteTrigger(mappingName, new JoyAxisTrigger(acceleratorControllerID, acceleratorAxis, invertAcceleratorAxis));
+                            System.out.println("Deleted accelerator keybinding.");
                             break;
                         default:
                             throw new IllegalArgumentException("Invalid actionType.");

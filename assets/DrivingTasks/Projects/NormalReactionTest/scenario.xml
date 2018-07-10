@@ -13,7 +13,7 @@
         	<car id="" profile="" ref="Ferrari">
         		<resetPoints>
         			<resetPoint ref="reset1"/>
-                    <resetPoint ref="reset2"/>
+              <resetPoint ref="reset2"/>
         		</resetPoints>
         		<tires profile="">
         			<type>winter</type>
@@ -22,7 +22,7 @@
         		<engine profile="">
         			<engineOn>true</engineOn>
         			<minSpeed>20</minSpeed>
-					<maxSpeed>200</maxSpeed>
+					<maxSpeed>60</maxSpeed>
 					<acceleration>4.0</acceleration>
 					<minRPM>750</minRPM>
 					<maxRPM>7500</maxRPM>

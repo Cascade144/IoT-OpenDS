@@ -716,15 +716,16 @@ public class Simulator extends SimulationBasics
     public void reset()
     {
         System.out.println("Beginning restart");
+        reactionCenter.close();
         // Increase the current trial number.
         currentTrial += 1;
+		if(currentTrial > numberOfTrials) {
+			System.out.println("Trials finished");
+			this.destroy();
+		}
         if (currentTrial == 3) {
         	System.out.println("Beginning hacking portion...");
 		}
-        if(currentTrial > numberOfTrials) {
-            System.out.println("Trials finished");
-            super.destroy();
-        }
         System.out.println("Now on trial: "+currentTrial);
 
         // Reset the cars position back to the start position.
@@ -732,7 +733,7 @@ public class Simulator extends SimulationBasics
         // Change the output folder to a new trial folder
         outputFolder = "analyzerData"+File.separator+experimentFileName+File.separator+"trial"+currentTrial;
         drivingTaskLogger = new DrivingTaskLogger(outputFolder, SimulationDefaults.driverName, drivingTask.getFileName());
-
+		reactionCenter.start();
         System.out.println("Finished restart");
     }
 

@@ -19,7 +19,7 @@
 		</activity>
 		<activity id="End_pauseSimulation" ref="">
 			<action delay="0.0" id="pauseSimulation" repeat="4">
-				<parameter name="duration" value="5"/>
+				<parameter name="duration" value="15"/>
 			</action>
 		</activity>
 		<activity id="End_resetSimulation">
@@ -663,7 +663,6 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial0_Trigger0_makeVisible_BLC_Test_Block0_Trial0_ContainerElement0"/>
 				<activity ref="BLC_Test_Block0_Trial0_Trigger0_setupBrakeLaneChangeReactionTimer"/>
-				<activity ref="Mid_disableBrake"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial0_Trigger0</condition>
 		</trigger>
@@ -672,8 +671,6 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial1_Trigger0_makeVisible_BLC_Test_Block0_Trial1_ContainerElement4"/>
 				<activity ref="BLC_Test_Block0_Trial1_Trigger0_setupBrakeLaneChangeReactionTimer"/>
-				<activity ref="Mid_enableBrake"/>
-				<activity ref="Mid_disableAccel"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial1_Trigger0</condition>
 		</trigger>
@@ -682,7 +679,8 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial2_Trigger0_makeVisible_BLC_Test_Block0_Trial2_ContainerElement4"/>
 				<activity ref="BLC_Test_Block0_Trial2_Trigger0_setupBrakeLaneChangeReactionTimer"/>
-				<activity ref="Mid_enableAccel"/>
+				<activity ref="Mid_disableSteeringLeft"/>
+				<activity ref="Mid_disableSteeringRight"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial2_Trigger0</condition>
 		</trigger>
@@ -691,6 +689,8 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial3_Trigger0_makeVisible_BLC_Test_Block0_Trial3_ContainerElement0"/>
 				<activity ref="BLC_Test_Block0_Trial3_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_enableSteeringLeft"/>
+				<activity ref="Mid_enableSteeringRight"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial3_Trigger0</condition>
 		</trigger>
@@ -707,6 +707,7 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial5_Trigger0_makeVisible_BLC_Test_Block0_Trial5_ContainerElement1"/>
 				<activity ref="BLC_Test_Block0_Trial5_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_disableBrake"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial5_Trigger0</condition>
 		</trigger>
@@ -715,6 +716,7 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial6_Trigger0_makeVisible_BLC_Test_Block0_Trial6_ContainerElement3"/>
 				<activity ref="BLC_Test_Block0_Trial6_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_enableBrake"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial6_Trigger0</condition>
 		</trigger>
@@ -731,6 +733,7 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial8_Trigger0_makeVisible_BLC_Test_Block0_Trial8_ContainerElement3"/>
 				<activity ref="BLC_Test_Block0_Trial8_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_disableAccel"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial8_Trigger0</condition>
 		</trigger>
@@ -739,6 +742,7 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial9_Trigger0_makeVisible_BLC_Test_Block0_Trial9_ContainerElement4"/>
 				<activity ref="BLC_Test_Block0_Trial9_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_enableAccel"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial9_Trigger0</condition>
 		</trigger>
@@ -755,6 +759,8 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial11_Trigger0_makeVisible_BLC_Test_Block0_Trial11_ContainerElement0"/>
 				<activity ref="BLC_Test_Block0_Trial11_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_disableSteeringLeft"/>
+				<activity ref="Mid_disableSteeringRight"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial11_Trigger0</condition>
 		</trigger>
@@ -763,6 +769,8 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial12_Trigger0_makeVisible_BLC_Test_Block0_Trial12_ContainerElement3"/>
 				<activity ref="BLC_Test_Block0_Trial12_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_enableSteeringLeft"/>
+				<activity ref="Mid_enableSteeringRight"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial12_Trigger0</condition>
 		</trigger>
@@ -779,6 +787,7 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial14_Trigger0_makeVisible_BLC_Test_Block0_Trial14_ContainerElement1"/>
 				<activity ref="BLC_Test_Block0_Trial14_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_disableBrake"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial14_Trigger0</condition>
 		</trigger>
@@ -787,6 +796,7 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial15_Trigger0_makeVisible_BLC_Test_Block0_Trial15_ContainerElement3"/>
 				<activity ref="BLC_Test_Block0_Trial15_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_enableBrake"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial15_Trigger0</condition>
 		</trigger>
@@ -803,6 +813,7 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial17_Trigger0_makeVisible_BLC_Test_Block0_Trial17_ContainerElement1"/>
 				<activity ref="BLC_Test_Block0_Trial17_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_disableAccel"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial17_Trigger0</condition>
 		</trigger>
@@ -811,6 +822,7 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial18_Trigger0_makeVisible_BLC_Test_Block0_Trial18_ContainerElement4"/>
 				<activity ref="BLC_Test_Block0_Trial18_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_enableAccel"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial18_Trigger0</condition>
 		</trigger>

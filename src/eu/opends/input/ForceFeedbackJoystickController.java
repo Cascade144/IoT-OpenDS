@@ -64,7 +64,7 @@ public class ForceFeedbackJoystickController implements FeatureNotSupportedEvent
 				System.out.println("Finding Joystick...");
 				joysticks = JoystickManager.getAllFFJoysticks();
 				System.out.println(joysticks);
-				System.out.print("Got joysticks...");
+				System.out.println("Got joysticks...");
 				if(!joysticks.isEmpty())
 				{
 					System.out.println("Joystick list is not empty");
@@ -90,7 +90,7 @@ public class ForceFeedbackJoystickController implements FeatureNotSupportedEvent
 				//System.out.println("Joystick "+js.getIndex()+ " ("+js.getName()+"):");
 				System.out.println("Supported effects: "+ primaryJoystick.getSupportedEffects());
 		
-				//System.out.println(" creating effects ...");
+				System.out.println(" creating effects ...");
 				springEffect = new SpringEffect();
 				springEffect.setEffectLength(10000); // 10 seconds
 				
