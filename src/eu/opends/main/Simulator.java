@@ -332,6 +332,7 @@ public class Simulator extends SimulationBasics
 		currentTrial = trialNumber;
 		experimentFileName = "experiment"+Util.getDateTimeString();
 		if(numberOfTrials > 1) {
+			Util.makeDirectory("analyzerData");
 			Util.makeDirectory("analyzerData/"+experimentFileName);
 			outputFolder = "analyzerData"+File.separator+experimentFileName+File.separator+"trial"+currentTrial;
 		} else {
@@ -722,6 +723,7 @@ public class Simulator extends SimulationBasics
 		if(currentTrial > numberOfTrials) {
 			System.out.println("Trials finished");
 			this.destroy();
+			System.exit(0);
 		}
         if (currentTrial == 3) {
         	System.out.println("Beginning hacking portion...");

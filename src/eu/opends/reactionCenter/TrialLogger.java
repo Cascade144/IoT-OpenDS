@@ -55,7 +55,6 @@ public class TrialLogger
 		this.trialNumber = parseTrialNumber(comment);
 		this.driverStats = driverStats;
 		// vpn;age;gender;track
-		System.out.println(driverStats);
 		String[] splitString = this.driverStats.split(";");
 		if(splitString.length >= 4)
 		{

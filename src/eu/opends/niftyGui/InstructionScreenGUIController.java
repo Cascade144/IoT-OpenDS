@@ -93,7 +93,6 @@ public class InstructionScreenGUIController implements ScreenController
 		String driverAge = getTextFromTextfield("driversAgeTextfield");
 		String driverGender = getTextFromTextfield("driversGenderTextfield");
 		String element = "-1;"+driverAge+";"+driverGender+";-1";
-		System.out.println(element);
 		instructionScreenGUI.writeDriverData(element);
 		instructionScreenGUI.hideDialog();
 	}
