@@ -63,6 +63,18 @@
 				<parameter name="actionType" value="enable"/>
 			</action>
 		</activity>
+		<activity id="Mid_invertSteeringRight">
+			<action delay="0.0" id="changeKeyBind" repeat="1">
+				<parameter name="mappingName" value="SteeringWheelRight"/>
+				<parameter name="actionType" value="invert"/>
+			</action>
+		</activity>
+		<activity id="Mid_invertSteeringLeft">
+			<action delay="0.0" id="changeKeyBind" repeat="1">
+				<parameter name="mappingName" value="SteeringWheelLeft"/>
+				<parameter name="actionType" value="invert"/>
+			</action>
+		</activity>
 		<activity id="Mid_enableBrake">
 			<action delay="0.0" id="changeKeyBind" repeat="1">
 				<parameter name="mappingName" value="Brake"/>
@@ -679,8 +691,8 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial2_Trigger0_makeVisible_BLC_Test_Block0_Trial2_ContainerElement4"/>
 				<activity ref="BLC_Test_Block0_Trial2_Trigger0_setupBrakeLaneChangeReactionTimer"/>
-				<activity ref="Mid_disableSteeringLeft"/>
-				<activity ref="Mid_disableSteeringRight"/>
+				<activity ref="Mid_invertSteeringLeft"/>
+				<activity ref="Mid_invertSteeringRight"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial2_Trigger0</condition>
 		</trigger>
@@ -689,6 +701,8 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial3_Trigger0_makeVisible_BLC_Test_Block0_Trial3_ContainerElement0"/>
 				<activity ref="BLC_Test_Block0_Trial3_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_disableSteeringRight"/>
+				<activity ref="Mid_disableSteeringLeft"/>
 				<activity ref="Mid_enableSteeringLeft"/>
 				<activity ref="Mid_enableSteeringRight"/>
 			</activities>
@@ -759,8 +773,8 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial11_Trigger0_makeVisible_BLC_Test_Block0_Trial11_ContainerElement0"/>
 				<activity ref="BLC_Test_Block0_Trial11_Trigger0_setupBrakeLaneChangeReactionTimer"/>
-				<activity ref="Mid_disableSteeringLeft"/>
-				<activity ref="Mid_disableSteeringRight"/>
+				<activity ref="Mid_invertSteeringLeft"/>
+				<activity ref="Mid_invertSteeringRight"/>
 			</activities>
 			<condition>collideWith:BLC_Test_Block0_Trial11_Trigger0</condition>
 		</trigger>
@@ -769,6 +783,8 @@
 			<activities>
 				<activity ref="BLC_Test_Block0_Trial12_Trigger0_makeVisible_BLC_Test_Block0_Trial12_ContainerElement3"/>
 				<activity ref="BLC_Test_Block0_Trial12_Trigger0_setupBrakeLaneChangeReactionTimer"/>
+				<activity ref="Mid_disableSteeringRight"/>
+				<activity ref="Mid_disableSteeringLeft"/>
 				<activity ref="Mid_enableSteeringLeft"/>
 				<activity ref="Mid_enableSteeringRight"/>
 			</activities>

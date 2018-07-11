@@ -84,12 +84,13 @@ public class KeyBindTriggerAction extends TriggerAction
                 } else if (actionType.equals("disable")) {
                     System.out.println("Disabling Keybinding: " + mappingName);
                     //inputManager.deleteMapping(mappingName);
-                    switch(mappingName) {
+                    switch (mappingName) {
                         case "SteeringWheelRight":
                             steeringControllerID = settingsLoader.getSetting(Setting.Joystick_steeringControllerID, 0);
                             steeringAxis = settingsLoader.getSetting(Setting.Joystick_steeringAxis, 1);
                             invertSteeringAxis = settingsLoader.getSetting(Setting.Joystick_invertSteeringAxis, false);
                             inputManager.deleteTrigger(mappingName, new JoyAxisTrigger(steeringControllerID, steeringAxis, invertSteeringAxis));
+                            inputManager.deleteTrigger(mappingName, new JoyAxisTrigger(steeringControllerID, steeringAxis, !invertSteeringAxis));
                             System.out.println("Deleted steering right keybinding.");
                             break;
                         case "SteeringWheelLeft":
@@ -97,6 +98,7 @@ public class KeyBindTriggerAction extends TriggerAction
                             steeringAxis = settingsLoader.getSetting(Setting.Joystick_steeringAxis, 1);
                             invertSteeringAxis = settingsLoader.getSetting(Setting.Joystick_invertSteeringAxis, false);
                             inputManager.deleteTrigger(mappingName, new JoyAxisTrigger(steeringControllerID, steeringAxis, !invertSteeringAxis));
+                            inputManager.deleteTrigger(mappingName, new JoyAxisTrigger(steeringControllerID, steeringAxis, invertSteeringAxis));
                             System.out.println("Deleted steering left keybinding.");
                             break;
                         case "Brake":
@@ -115,6 +117,26 @@ public class KeyBindTriggerAction extends TriggerAction
                             break;
                         default:
                             throw new IllegalArgumentException("Invalid actionType.");
+                    }
+                } else if (actionType.equals("invert")){
+                    System.out.println("Inverting Keybinding "+mappingName);
+                    switch (mappingName){
+                        case "SteeringWheelRight":
+                            steeringControllerID = settingsLoader.getSetting(Setting.Joystick_steeringControllerID, 0);
+                            steeringAxis = settingsLoader.getSetting(Setting.Joystick_steeringAxis, 1);
+                            invertSteeringAxis = settingsLoader.getSetting(Setting.Joystick_invertSteeringAxis, false);
+                            inputManager.deleteTrigger(mappingName, new JoyAxisTrigger(steeringControllerID, steeringAxis, invertSteeringAxis));
+                            inputManager.addMapping(mappingName, new JoyAxisTrigger(steeringControllerID, steeringAxis, !invertSteeringAxis));
+                            System.out.println("Inverted steering right keybinding.");
+                            break;
+                        case "SteeringWheelLeft":
+                            steeringControllerID = settingsLoader.getSetting(Setting.Joystick_steeringControllerID, 0);
+                            steeringAxis = settingsLoader.getSetting(Setting.Joystick_steeringAxis, 1);
+                            invertSteeringAxis = settingsLoader.getSetting(Setting.Joystick_invertSteeringAxis, false);
+                            inputManager.deleteTrigger(mappingName, new JoyAxisTrigger(steeringControllerID, steeringAxis, !invertSteeringAxis));
+                            inputManager.addMapping(mappingName, new JoyAxisTrigger(steeringControllerID, steeringAxis, invertSteeringAxis));
+                            System.out.println("Inverted steering left keybinding.");
+                            break;
                     }
                 }
                 updateCounter();

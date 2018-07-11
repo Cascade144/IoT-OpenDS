@@ -78,8 +78,8 @@
 
 	<controllers>
 		<joystick>
-			<!-- Logitech G27 -->
 			<dumpJoystickList>true</dumpJoystickList>
+			<!-- Logitech G29 -->
 			<enableForceFeedback>true</enableForceFeedback>
 			<steering controllerID="0" axisID="0" invert="false" sensitivity="1.0"/>
 			<combinedPedals controllerID="0" axisID="9" invert="false" sensitivity="1.0"/>
@@ -87,14 +87,24 @@
 			<brake controllerID="0" axisID="3" invert="true" sensitivity="1.0"/>
 			<clutch controllerID="0" axisID="1" invert="true" sensitivity="1.0"/>
 			<keyAssignments>
-				<keyAssignment function="start_engine" key="BUTTON_1" />
-				<keyAssignment function="stop_engine" key="BUTTON_2" />
+				<keyAssignment function="horn" key="BUTTON_1" />
 			</keyAssignments>
+			<!-- Logitech GamePad F310
+			<steering controllerID="0" axisID="0" invert="false" sensitivity="0.3"/>
+			<combinedPedals controllerID="0" axisID="6" invert="false" sensitivity="1.0"/>
+			<accelerator controllerID="0" axisID="5" invert="false" sensitivity="1.0"/>
+			<brake controllerID="0" axisID="4" invert="false" sensitivity="1.0"/>
+			<clutch controllerID="0" axisID="7" invert="true" sensitivity="1.0"/>
+			<keyAssignments>
+				<keyAssignment function="toggle_engine" key="BUTTON_6"/>
+				<keyAssignment function="horn" key="BUTTON_3"/>
+			</keyAssignments>
+			-->
 		</joystick>
 		<keyboard>
 			<keyAssignments>
-				<keyAssignment function="toggle_cam" key="KEY_V" />
-				<keyAssignment function="horn" key="KEY_H" />
+				<keyAssignment function="toggle_cam" key="KEY_V"/>
+				<keyAssignment function="horn" key="KEY_H"/>
 			</keyAssignments>
 		</keyboard>
 		<mouse>
