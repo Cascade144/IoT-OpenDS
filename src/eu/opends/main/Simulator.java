@@ -722,8 +722,7 @@ public class Simulator extends SimulationBasics
         currentTrial += 1;
 		if(currentTrial > numberOfTrials) {
 			System.out.println("Trials finished");
-			this.destroy();
-			System.exit(0);
+			super.destroy();
 		}
         if (currentTrial == 3) {
         	System.out.println("Beginning hacking portion...");
