@@ -330,7 +330,7 @@ public class Simulator extends SimulationBasics
 		numberOfTrials = settingsLoader.getSetting(Setting.General_numberOfTrials, 1);
 		System.out.println("Number of Trials: "+numberOfTrials);
 		currentTrial = trialNumber;
-		experimentFileName = "experiment"+Util.getDateTimeString();
+		experimentFileName = "experiment-"+driverName+"-"+Util.getDateTimeString();
 		if(numberOfTrials > 1) {
 			Util.makeDirectory("analyzerData");
 			Util.makeDirectory("analyzerData/"+experimentFileName);
@@ -685,6 +685,8 @@ public class Simulator extends SimulationBasics
 			moviePlayer.stop();
 			
 			reactionCenter.close();
+
+			audioRenderer.cleanup();
 			
 			HMICenter.close();
 			
@@ -722,7 +724,7 @@ public class Simulator extends SimulationBasics
         currentTrial += 1;
 		if(currentTrial > numberOfTrials) {
 			System.out.println("Trials finished");
-			super.destroy();
+			this.destroy();
 		}
         if (currentTrial == 3) {
         	System.out.println("Beginning hacking portion...");
