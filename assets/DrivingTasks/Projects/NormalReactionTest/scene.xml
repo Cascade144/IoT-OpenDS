@@ -97,6 +97,58 @@
 				</vector>
 			</translation>
 		</model>
+		<model id="road_barrier" key="Models/road_segments/road_barrier/road_barrier.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>meshShape</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.05</entry>
+					<entry>15.0</entry>
+					<entry>1000.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>11.0</entry>
+					<entry>0.0</entry>
+					<entry>24930.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="road_barrier" key="Models/road_segments/road_barrier/road_barrier.scene" ref="">
+			<mass>0</mass>
+			<visible>true</visible>
+			<collisionShape>meshShape</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.05</entry>
+					<entry>15.0</entry>
+					<entry>1000.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>-11.0</entry>
+					<entry>0.0</entry>
+					<entry>24930.0</entry>
+				</vector>
+			</translation>
+		</model>
 		<model id="Exp_BLC_150_StartPosition_Trigger" key="Models/trigger/trigger.scene" ref="">
 			<mass>0</mass>
 			<visible>false</visible>

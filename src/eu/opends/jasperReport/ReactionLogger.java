@@ -120,7 +120,7 @@ public class ReactionLogger
 				
 				bw.write("</report>\n");        
 				bw.close();
-				generateReport();
+				//generateReport();
 				
 			} catch (IOException e) {
 	
