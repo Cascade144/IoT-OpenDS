@@ -2120,7 +2120,7 @@
 				<vector jtype="java_lang_Float" size="3">
 					<entry>0</entry>
 					<entry>0</entry>
-					<entry>4995</entry>
+					<entry>24500.0</entry>
 				</vector>
 			</translation>
 			<rotation quaternion="false">
@@ -2137,6 +2137,22 @@
 					<entry>0</entry>
 					<entry>0</entry>
 					<entry>20250.0</entry>
+				</vector>
+			</translation>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0</entry>
+					<entry>0</entry>
+					<entry>0</entry>
+				</vector>
+			</rotation>
+		</resetPoint>
+		<resetPoint id="reset3">
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0</entry>
+					<entry>0</entry>
+					<entry>24425.0</entry>
 				</vector>
 			</translation>
 			<rotation quaternion="false">

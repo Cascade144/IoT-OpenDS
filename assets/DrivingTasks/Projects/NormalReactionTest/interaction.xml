@@ -665,8 +665,8 @@
 				<activity ref="BLC_Test_Block0_Trial17_Trigger0_makeInvisible_BLC_Test_Block0_Trial17_ContainerElement1"/>
 				<activity ref="BLC_Test_Block0_Trial18_Trigger0_makeInvisible_BLC_Test_Block0_Trial18_ContainerElement4"/>
 				<activity ref="BLC_Test_Block0_Trial19_Trigger0_makeInvisible_BLC_Test_Block0_Trial19_ContainerElement4"/>
-				<activity ref="End_pauseSimulation"/>
 				<activity ref="End_resetSimulation"/>
+				<activity ref="End_pauseSimulation"/>
 			</activities>
 			<condition>collideWith:BLC_Test_End_Trigger</condition>
 		</trigger>
