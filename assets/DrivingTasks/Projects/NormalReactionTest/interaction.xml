@@ -2,8 +2,11 @@
 <interaction xmlns="http://opends.eu/drivingtask/interaction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://opends.eu/drivingtask/interaction ../../Schema/interaction.xsd">
 	<activities>
 		<activity id="StartPosition_openInstructionsScreen" ref="">
-			<action delay="0.0" id="openInstructionsScreen" repeat="1">
+			<action delay="0.0" id="openInstructionsScreen" repeat="3">
 				<parameter name="instructionID" value="instructionScreen_1"/>
+			</action>
+			<action delay="0.0" id="resetCar" repeat="3">
+				<parameter name="resetPointID" value="reset3"/>
 			</action>
 		</activity>
 		<activity id="Start_startRM" ref="">
@@ -666,7 +669,6 @@
 				<activity ref="BLC_Test_Block0_Trial18_Trigger0_makeInvisible_BLC_Test_Block0_Trial18_ContainerElement4"/>
 				<activity ref="BLC_Test_Block0_Trial19_Trigger0_makeInvisible_BLC_Test_Block0_Trial19_ContainerElement4"/>
 				<activity ref="End_resetSimulation"/>
-				<activity ref="End_pauseSimulation"/>
 			</activities>
 			<condition>collideWith:BLC_Test_End_Trigger</condition>
 		</trigger>

@@ -603,10 +603,9 @@ public class Simulator extends SimulationBasics
 			
 			if(eyetrackerCenter != null)
 				eyetrackerCenter.update();
+			taskCogLoad.update(tpf);
                         
-                        taskCogLoad.update(tpf);
-                        
-		if(frameCounter == 5)
+			if(frameCounter == 5)
     		{
     			if(settingsLoader.getSetting(Setting.General_pauseAfterStartup, SimulationDefaults.General_pauseAfterStartup))
     				setPause(true);

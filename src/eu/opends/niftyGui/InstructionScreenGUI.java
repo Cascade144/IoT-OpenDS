@@ -131,9 +131,6 @@ public class InstructionScreenGUI
 	 */
 	private void initInstructionScreenGUI(String layerID)
 	{
-		if(sim.getCurrentTrial() > 1){
-			return;
-		}
 		NiftyJmeDisplay niftyDisplay = new NiftyJmeDisplay(assetManager, inputManager, audioRenderer, guiViewPort);
     	
     	// Create a new NiftyGUI object

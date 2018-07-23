@@ -52,8 +52,8 @@ public class StopRecordingTriggerAction extends TriggerAction
 					PanelCenter.getStoreText().setText(" ");
 					
 					// print time elapsed since start trigger was hit to screen 
-					String timestamp = dataWriter.getElapsedTime();
-					PanelCenter.getMessageBox().addMessage(timestamp, 3);
+					//String timestamp = dataWriter.getElapsedTime();
+					//PanelCenter.getMessageBox().addMessage(timestamp, 3);
 				}
 			}
 			
