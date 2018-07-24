@@ -15,6 +15,7 @@
         			<resetPoint ref="reset1"/>
                     <resetPoint ref="reset2"/>
                     <resetPoint ref="reset3"/>
+                    <resetPoint ref="reset4"/>
         		</resetPoints>
         		<tires profile="">
         			<type>winter</type>
@@ -79,8 +80,8 @@
                   <xMax>5.55</xMax>
             </lane>
             <lane id="4">
-                  <xMin>1.85</xMin>
-                  <xMax>5.55</xMax>
+                  <xMin>5.55</xMin>
+                  <xMax>9.25</xMax>
             </lane>
         </road>
 </scenario>

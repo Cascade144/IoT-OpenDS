@@ -201,7 +201,7 @@
 				</vector>
 			</translation>
 		</model>
-		<model id="BLC_Test_End_Trigger" key="Models/trigger/trigger.scene" ref="">
+		<model id="BLC_Test_Reset_Trigger" key="Models/trigger/trigger.scene" ref="">
 			<mass>0</mass>
 			<visible>false</visible>
 			<collisionShape>none</collisionShape>
@@ -224,6 +224,32 @@
 					<entry>0.0</entry>
 					<entry>0.0</entry>
 					<entry>20250.0</entry>
+				</vector>
+			</translation>
+		</model>
+		<model id="BLC_Test_Close_Trigger" key="Models/trigger/trigger.scene" ref="">
+			<mass>0</mass>
+			<visible>false</visible>
+			<collisionShape>none</collisionShape>
+			<scale>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+					<entry>1.0</entry>
+				</vector>
+			</scale>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+				</vector>
+			</rotation>
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0.0</entry>
+					<entry>0.0</entry>
+					<entry>20200.0</entry>
 				</vector>
 			</translation>
 		</model>
@@ -2153,6 +2179,22 @@
 					<entry>0</entry>
 					<entry>0</entry>
 					<entry>24425.0</entry>
+				</vector>
+			</translation>
+			<rotation quaternion="false">
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0</entry>
+					<entry>0</entry>
+					<entry>0</entry>
+				</vector>
+			</rotation>
+		</resetPoint>
+		<resetPoint id="reset4">
+			<translation>
+				<vector jtype="java_lang_Float" size="3">
+					<entry>0</entry>
+					<entry>0</entry>
+					<entry>20200.0</entry>
 				</vector>
 			</translation>
 			<rotation quaternion="false">

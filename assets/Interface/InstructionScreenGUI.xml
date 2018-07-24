@@ -167,12 +167,12 @@
 				<panel childLayout="center" align="center" width="100%" height="30px" />
 
 				<panel childLayout="center" align="center" width="100%" height="30px">
-					<control name="label" text="If a red sign (x) shows up, you will have to slow down as fast as possible to 20 km/h" color="#ffffffff"
+					<control name="label" text="If a red sign (x) shows up, you will have to slow down as fast as possible to 20 km/h." color="#ffffffff"
 						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
 					</control>
 				</panel>
 				<panel childLayout="center" align="center" width="100%" height="30px">
-					<control name="label" text="without leaving the center lane." color="#ffffffff"
+					<control name="label" text="DO NOT leave the center lane during your deceleration." color="#ffffffff"
 						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
 					</control>
 				</panel>
@@ -270,7 +270,15 @@
 					</control>
 				</panel>
 				<panel childLayout="center" align="center" width="100%" height="30px">
-					<control name="label" text="and make sure to return to the center lane for the next sign." color="#ffffffff"
+					<control name="label" text="and make sure to return to the center lane before the next sign." color="#ffffffff"
+						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
+					</control>
+				</panel>
+
+				<panel childLayout="center" align="center" width="100%" height="30px" />
+
+				<panel childLayout="center" align="center" width="100%" height="30px">
+					<control name="label" text="There will be three trials, each consisting of 20 gantries each." color="#ffffffff"
 						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
 					</control>
 				</panel>
@@ -309,6 +317,48 @@
 					<control id="vor" name="button" label="start" height="100%" width="20%">
 						<interact onClick="clickStartButton()" />
 					</control>
+				</panel>
+			</panel>
+
+		</layer>
+
+	</screen>
+
+	<!-- +++++++++++++++++++++++++++++++++++++++ -->
+	<!-- close screen -->
+	<!-- +++++++++++++++++++++++++++++++++++++++ -->
+
+	<screen id="close"
+		controller="eu.opends.niftyGui.InstructionScreenGUIController">
+
+		<layer id="closeScreen_1" childLayout="vertical" backgroundColor="#0008" visible="true">
+
+			<panel childLayout="vertical" align="center" width="100%">
+
+				<panel childLayout="center" align="center" width="100%" height="200px" />
+
+				<panel childLayout="center" align="center" width="100%" height="30px">
+					<control name="label" text="Thanks for your help with this driving simulator experiment." color="#ffffffff"
+						align="center" valign="center" height="50px" font="Interface/Fonts/Arial32px.fnt">
+					</control>
+				</panel>
+
+				<panel childLayout="center" align="center" width="100%" height="30px" />
+
+			</panel>
+
+			<panel childLayout="vertical" align="center" width="100%" height="*"/>
+
+			<panel childLayout="vertical" align="center" width="100%" height="10%">
+				<panel childLayout="vertical" align="center" width="100%" height="50%" />
+				<panel childLayout="horizontal" align="center" width="100%" height="50%">
+					<panel childLayout="center" align="center" width="20%" height="100%" />
+					<panel childLayout="center" align="center" width="20%" height="100%" />
+					<panel childLayout="center" align="center" width="20%" height="100%" />
+					<panel childLayout="center" align="center" width="20%" height="100%" />
+						<control id="vor" name="button" label="close" height="100%" width="20%">
+							<interact onClick="clickCloseButton()" />
+						</control>
 				</panel>
 			</panel>
 

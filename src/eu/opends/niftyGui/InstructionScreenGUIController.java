@@ -97,4 +97,9 @@ public class InstructionScreenGUIController implements ScreenController
 		instructionScreenGUI.hideDialog();
 	}
 
+	public void clickCloseButton()
+	{
+		sim.destroy();
+	}
+
 }

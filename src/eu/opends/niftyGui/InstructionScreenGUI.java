@@ -143,20 +143,25 @@ public class InstructionScreenGUI
 			case "instructionScreen_1": {
 				xmlPath = "Interface/InstructionScreenGUI.xml";
 				nifty.fromXml(xmlPath, "start", new InstructionScreenGUIController(sim, this));
+				break;
 			}
 
+			case "closeScreen_1": {
+				xmlPath = "Interface/InstructionScreenGUI.xml";
+				nifty.fromXml(xmlPath, "close", new InstructionScreenGUIController(sim, this));
+				break;
+			}
             case "dataEntryScreen_1": {
-                xmlPath = "Interface/InstructionScreenGUI.xml";
-                nifty.fromXml(xmlPath, "start", new InstructionScreenGUIController(sim, this));
-            } 
-                break;
+				xmlPath = "Interface/InstructionScreenGUI.xml";
+				nifty.fromXml(xmlPath, "start", new InstructionScreenGUIController(sim, this));
+				break;
+			}
             
             case "distractionScreen_1": {
                 xmlPath = "Interface"+File.separator+"DistractionScreenGUI.xml";
                 nifty.fromXml(xmlPath, "start", new DistractionScreenGUIController(sim, this));
-                
-            } 
                 break;
+            }
                 
             default: System.out.println("Invalid layerID: " + layerID);
                 break;

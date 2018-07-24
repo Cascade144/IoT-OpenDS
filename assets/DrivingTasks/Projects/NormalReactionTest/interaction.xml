@@ -9,6 +9,11 @@
 				<parameter name="resetPointID" value="reset3"/>
 			</action>
 		</activity>
+		<activity id="EndPosition_openCloseScreen" ref="">
+			<action delay="0.0" id="openInstructionsScreen" repeat="1">
+				<parameter name="instructionID" value="closeScreen_1"/>
+			</action>
+		</activity>
 		<activity id="Start_startRM" ref="">
 			<action delay="0.0" id="startReactionMeasurement" repeat="1"/>
 		</activity>
@@ -26,9 +31,12 @@
 			</action>
 		</activity>
 		<activity id="End_resetSimulation">
-			<action delay="0.0" id="resetSimulation" repeat="4">
+			<action delay="0.0" id="resetSimulation" repeat="2">
 				<parameter name="duration" value="0"/>
 			</action>
+		</activity>
+		<activity id="End_closeSimulation">
+			<action delay="0.0" id="shutDownSimulation" repeat="1"/>
 		</activity>
 		<activity id="Mid_disableSteeringRight">
 			<action delay="0.0" id="changeKeyBind" repeat="1">
@@ -130,7 +138,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial1_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="3">
+			<action delay="0.1" id="setupLaneChangeReactionTimer" repeat="4">
 				<parameter name="minSteeringAngle" value="0"/>
 				<parameter name="targetLane" value="4"/>
 				<parameter name="startLane" value="2"/>
@@ -157,7 +165,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial2_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="4">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -184,7 +192,7 @@
 			</action>
 		</activity>
 		<activity id="BLC_Test_Block0_Trial3_Trigger0_setupBrakeLaneChangeReactionTimer" ref="">
-			<action delay="0.1" id="setupBrakeReactionTimer" repeat="3">
+			<action delay="0.1" id="setupBrakeReactionTimer" repeat="4">
 				<parameter name="startSpeed" value="50"/>
 				<parameter name="mustPressBrakePedal" value="true"/>
 				<parameter name="taskCompletionAfterDistance" value="117"/>
@@ -645,7 +653,7 @@
 			</activities>
 			<condition>collideWith:BLC_Test_Start_Trigger</condition>
 		</trigger>
-		<trigger id="BLC_Test_End_Trigger" priority="1">
+		<trigger id="BLC_Test_Reset_Trigger" priority="1">
 			<activities>
 				<activity ref="End_stopRecording"/>
 				<activity ref="BLC_Test_Block0_Trial0_Trigger0_makeInvisible_BLC_Test_Block0_Trial0_ContainerElement0"/>
@@ -670,8 +678,16 @@
 				<activity ref="BLC_Test_Block0_Trial19_Trigger0_makeInvisible_BLC_Test_Block0_Trial19_ContainerElement4"/>
 				<activity ref="End_resetSimulation"/>
 			</activities>
-			<condition>collideWith:BLC_Test_End_Trigger</condition>
+			<condition>collideWith:BLC_Test_Reset_Trigger</condition>
 		</trigger>
+
+		<trigger id="BLC_Test_Close_Trigger" priority="1">
+			<activities>
+				<activity ref="EndPosition_openCloseScreen"/>
+			</activities>
+			<condition>collideWith:BLC_Test_Close_Trigger</condition>
+		</trigger>
+
 		<!-- gantry 1 -->
 		<trigger id="BLC_Test_Block0_Trial0_Trigger0" priority="1">
 			<activities>
